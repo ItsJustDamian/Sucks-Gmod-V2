@@ -176,9 +176,9 @@ bool __stdcall hkCreateMove(float flInputSampleTime, CUserCmd * cmd)
 	if (G::Variables::AimbotEnabled)
 	{
 		result = Aimbot->CreateMove(cmd);
-		//oCreateMove(flInputSampleTime, cmd);
+		oCreateMove(flInputSampleTime, cmd);
 	}
-	else result = false; // oCreateMove(flInputSampleTime, cmd);
+	else result = oCreateMove(flInputSampleTime, cmd);
 	
 	return result;
 }
